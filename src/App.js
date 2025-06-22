@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-
 import { useEffect, useRef } from 'react';
+import emailjs from "@emailjs/browser";
 
 function SplashCursor({
   SIM_RESOLUTION = 128,
@@ -1441,7 +1441,53 @@ function Pictures() {
   );
 }
 
+function Offers() {
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5329jas",     // Replace with your EmailJS service ID
+        "template_kovltvp",    // Replace with your EmailJS template ID
+        form.current,
+        "RyBZ8wtZRXwRQ2HLC"      // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Email sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("Failed to send email. Please try again.");
+        }
+      );
+  };
+
+  return (
+    <section id="offers-section">
+      <h4>Offers</h4>
+
+      <div className="offers-container">
+        <img src="https://real11.com/new_script/img/fantasy-cricket.webp" alt="Offers Banner" className="offers-image" />
+
+        <form ref={form} onSubmit={sendEmail} className="offers-form">
+          <input
+            type="email"
+            name="user_email"
+            placeholder="your@gmail.com"
+            required
+            className="email-input"
+          />
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}
 
 
 
@@ -1539,6 +1585,7 @@ function App() {
       <Products />
       <Testimonials />
       <Pictures />
+      <Offers />
       <Contact />
       <LetsTalk />
       <Footer />

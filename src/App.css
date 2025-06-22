@@ -903,3 +903,52 @@ body, html {
   color: #aaa;
   z-index: 1000;
 }
+#offers-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color:transparent;
+}
+
+.offers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.offers-image {
+  max-width: 100%;
+  height: auto;
+  width: 600px;
+}
+
+.offers-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.email-input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
