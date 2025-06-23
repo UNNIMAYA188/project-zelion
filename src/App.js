@@ -3,6 +3,9 @@ import './App.css';
 import { useEffect, useRef } from 'react';
 import emailjs from "@emailjs/browser";
 
+
+
+
 function SplashCursor({
   SIM_RESOLUTION = 128,
   DYE_RESOLUTION = 1440,
