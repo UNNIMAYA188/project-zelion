@@ -1,3 +1,7 @@
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }}
 /* General Styling */
 body, html {
   margin: 0;
@@ -112,10 +116,10 @@ body, html {
   left: 0;
   width: 100%;
   height: 200%;
-  background: white;
-  animation: flashSplash 1s ease-out forwards;
+  background: rgba(255, 255, 255, 0.05); /* Very light transparent */
   z-index: 1;
 }
+
 
 /* Animated text */
 .title-head {
@@ -300,7 +304,7 @@ body, html {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   text-align: left;
   transition: transform 0.3s ease;
-  z-index: 1000;
+  z-index: 100000;
   
 }
 
@@ -937,34 +941,23 @@ body, html {
 
 }
 
-.footer-social {
-  flex: 1 1 150px;
-    z-index: 1000;
-
+.footer-social .social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-.social-icons {
-  display: -moz-popup;
-  gap: 1rem;
-  width: 100px;
-  height: 100px;
-    z-index: 1000;
-
+.footer-social .social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.social-icons a {
-  font-size-adjust: 30%;
-  color: #ccc;
-  transition: color 0.3s ease;
-    
-
+.footer-social .social-icons img:hover {
+  transform: scale(1.1);
 }
 
-.social-icons a:hover {
-  color: #fff;
-   
-
-}
 
 .footer-bottom {
   margin-top: 2rem;
@@ -991,7 +984,7 @@ body, html {
 .offers-image {
   max-width: 100%;
   height: auto;
-  width: 600px;
+  width: 300px;
 }
 
 .offers-form {

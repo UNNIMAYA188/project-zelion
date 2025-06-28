@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 
 
 
-
 function SplashCursor({
   SIM_RESOLUTION = 128,
   DYE_RESOLUTION = 1440,
@@ -1431,7 +1430,7 @@ function Pictures() {
   return (
     <section id="testimonials" className="section pictures-section">
       <h4 className="gallery-title">Gallery</h4>
-      <p className="gallery-subtitle">"Trusted by Champions. Designed for You."</p>
+      <p className="gallery-subtitle">Trusted by Champions. Designed for You.</p>
 
       <div className="floating-gallery">
         {images.map((img, index) => (
@@ -1470,10 +1469,12 @@ function Offers() {
 
   return (
     <section id="offers-section">
-      <h4>Offers</h4>
+      <h4 className="gallery-title">Offers</h4>
+            <p className="gallery-subtitle">Subscribe now to unlock exclusive deals, limited-time offers, and early access to our latest products!</p>
+
 
       <div className="offers-container">
-        <img src="https://real11.com/new_script/img/fantasy-cricket.webp" alt="Offers Banner" className="offers-image" />
+        <img src="/images/offers.jpg" alt="Offers Banner" className="offers-image" />
 
         <form ref={form} onSubmit={sendEmail} className="offers-form">
           <input
@@ -1546,7 +1547,7 @@ function Footer() {
         <div className="footer-brand">
           <div className="brand-logo">
             <img src="/images/logo2.png" alt="Zelion Logo" />
-            <h2 style={{position:"centre"}}>Zelion Cricket</h2>
+            <h2>Zelion Cricket</h2>
           </div>
           <p>Where Passion Meets Performance.</p>
         </div>
@@ -1564,9 +1565,21 @@ function Footer() {
 
         {/* Right: Social Icons */}
         <div className="footer-social">
-          <h4>Follow Us on </h4>
-           <p> Instagram , Facebook, twitter , youtube</p>
-  
+          <h4>Follow Us</h4>
+          <div className="social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" alt="Instagram" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Facebook-1024.png" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-512.png" alt="Twitter" />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Youtube-1024.png" alt="YouTube" />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1576,8 +1589,6 @@ function Footer() {
     </footer>
   );
 }
-
-
 function App() {
   return (
     <div className="App">
